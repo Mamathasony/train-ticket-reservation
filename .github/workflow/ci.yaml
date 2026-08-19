@@ -19,7 +19,7 @@ jobs:
      run: mvn compile
    - name: test with maven
      run: mvn test
-   - name: package with the maven
+   - name: package with maven
      run: mvn package
    - name: verify the war file
      run: ls -lh taget/
