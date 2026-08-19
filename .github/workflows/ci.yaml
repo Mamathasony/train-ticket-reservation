@@ -11,7 +11,7 @@ jobs:
     - name: set-up jdk
       uses: actions/checkout@v3
       with:
-       distributions: "termiun"
+       distributions: "temurin"
        java-version: '17'
     - name: validate with maven
       run: mvn validate
