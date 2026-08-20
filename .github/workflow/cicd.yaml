@@ -23,6 +23,7 @@ jobs:
      run: mvn package
    - name: verify the war file
      run: ls -lh taget/
+     
     #Deploy war to tomcat
    - name: deploy war to tomcat
      run:|
