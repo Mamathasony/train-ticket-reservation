@@ -22,7 +22,7 @@ jobs:
    - name: package with maven
      run: mvn package
    - name: verify the war file
-     run: ls -lh taget/
+     run: ls -lh target/
     #Deploy war to tomcat
    - name: deploy war to tomcat
      run: |
