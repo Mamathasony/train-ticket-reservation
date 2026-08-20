@@ -1,4 +1,4 @@
-name: ci pipeline to deploy maven
+name: ci/cd pipeline to deploy tomcat
 on:
  push:
   branches: master
@@ -23,4 +23,11 @@ jobs:
      run: mvn package
    - name: verify the war file
      run: ls -lh taget/
+    #Deploy war to tomcat
+   - name: deploy war to tomcat
+     run:|
+         curl -v -u ${{ secrets.TOMCAT_USERNAME }}:${{ secrets.TOMCAT_PASSWORD }} 
+         -T target //TrainBook-1.0.0-SNAPSHOT.war \
+         "http://${{ secrets.TOMCAT_HOST }}:8080/manager/text/deploy?path=/TrainBook&update="true"
+         
      
