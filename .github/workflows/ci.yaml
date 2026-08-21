@@ -10,7 +10,7 @@ jobs:
    #1.checkout source code
    - name: checkout source code
      uses: actions/checkout@v4
-   #2. setup java 17
+   #2. setup java
    - name: set-up jdk
      uses: actions/setup-java@v4
      with:
