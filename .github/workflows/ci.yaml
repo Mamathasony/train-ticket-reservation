@@ -11,7 +11,7 @@ jobs:
    - name: checkout source code
      uses: actions/checkout@v4
    #2. setup java 17
-   - name: setup java 17
+   - name: set-up jdk
      uses: actions/setup-java@v4
      with:
       distribution: temurin
