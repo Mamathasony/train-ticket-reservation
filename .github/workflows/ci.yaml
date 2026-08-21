@@ -15,7 +15,8 @@ jobs:
      uses: actions/setup-java@v5
      with:
       distribution: temurin
-      version: '17'
+      java-version: '17'
+      cache: maven
    #3. validate
    - name: validate
      run: mvn validate
